@@ -12,6 +12,17 @@ body, html, input, textarea{
     background-color: #f5f6fa;
 }
 
+
+body.dark {
+	background: #222222;
+	#normal {
+		color: #f2f2f2;
+	}
+	.slider {
+		background-color: #333333;
+	}
+}
+
 // variables
 
 $color-top-1: #5c48d3;
@@ -64,6 +75,7 @@ header {
         .button-toggle{
             display: none;
         }
+
     }
 
 
@@ -74,7 +86,23 @@ header {
     width: 100%;
 
     .navbar {
+        .navbar-toggler{
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: none;
+            border: none;
+            align-items: center;
+            display: flex;
+            font-size: 2rem;
+        }
+        
         .navbar-nav {
+            .mobile{
+                display: none;
+            }
             .nav-item{
                 .nav-link{
                     color: white;
@@ -153,40 +181,51 @@ main{
                 left: 15px;
             }
         }
-        .account, .period, .adm, .fundo {
+
+        .filters{
             margin-top: 2rem;
-            transition: all .5s ease-in-out;
 
-            h3{
-                font-size: 1.2rem;
-                font-weight: 500;
+            .accordion {
+                color: #444;
+                background: none;
                 cursor: pointer;
-                transform: translateX(20px);
-
-                &::before {
-                    content: '-';
-                    position: absolute;
-                    font-size: 1.2rem;
-                    transform: translate(170px, 0px);
+                padding: 5px;
+                width: 100%;
+                font-weight: 500;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 18px;
+                transition: 0.4s;
+    
+                &:after {
+                    content: '\2212';
+                    color: #777;
+                    font-weight: bold;
+                    float: right;
+                    margin-left: 5px;
+                  }
+                  
+                  span{
+                    display: inline-block;
+                    transform: translateX(35px);
+                  }
                 }
-            }
+              .active:after {
+                content: "\002B";
+              }
+              
+              .panel {
+                padding: 0 18px;
+                margin-bottom: 2rem;
+                max-height: 100px;
+                overflow: hidden;
+                transition: 0.2s ease-out;
+              }
         }
     }
 
-    .account.active, 
-    .period.active,
-    .adm.active,
-    .fundo.active{
-        height : 25px;
-        overflow: hidden;
-
-        h3{
-            &::before {
-                content: '+';
-            }
-        }
-    }
-
+    
 
     .content-right {
         background-color: #f5f6fa;
@@ -279,23 +318,6 @@ main{
 
 
 
-.acc{
-    padding: 2rem;
-    background: #ccc;
-    width: 200px;
-    .label{
-        h3{
-            color: #5c48d3;
-            cursor: pointer;
-        }
-    }
-    .content{
-        background-color: #FFFFFF;
-        
-    }
-}
 
-.close-content{
- height: 0;
- overflow: hidden;
-}
+
+

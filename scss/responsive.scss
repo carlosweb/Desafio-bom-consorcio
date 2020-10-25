@@ -38,6 +38,14 @@
         transform: rotate(180deg);
         transition: .5s ease-in-out;
     }
+
+    header .menu .navbar .navbar-nav .mobile {
+        display: block;
+    }
+
+    header .buttons {
+        display: none!important;
+    }
     
     main .content-left {
         transform: translateX(-500px);
@@ -60,6 +68,3 @@
     }
 }
 
-@media (min-width: 576px) { 
-    
- }

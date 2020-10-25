@@ -1,3 +1,4 @@
+// sidebar js
 const btToggle = document.querySelector('.button-toggle')
 const sideBar = document.querySelector('.content-left')
 const iconBarRight = document.querySelector('.bi-chevron-right')
@@ -8,15 +9,26 @@ btToggle.addEventListener('click', event => {
     iconBarRight.classList.toggle('rotate')
 } )
 
-const accordion = document.getElementsByClassName('accordion')
 
-  for(let i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click', e => {
-      e.stopPropagation()
-        accordion[i].classList.toggle('active')
-    })
-  }
+// accordion
+const acc = document.getElementsByClassName("accordion");
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", () => {
+    acc[i].classList.toggle('active')
+    const panel = acc[i].nextElementSibling
+    if(panel.style.maxHeight){
+      panel.style.maxHeight = null
+    }else{
+      panel.style.maxHeight = 0
+    }
   })
+} 
+
+// Tooltip js
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+const light = document.querySelector('.bi-sun')
+const dark = document.querySelector('.bi-sun')
