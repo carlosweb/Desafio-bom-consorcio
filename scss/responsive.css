@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+  header .logo .logo-site {
+    display: none; }
+
+  header .logo .logo-responsive {
+    transform: translateX(0px);
+    width: auto;
+    padding: 1rem;
+    transition: .5s ease; }
+
+  header .logo .button-toggle {
+    display: block;
+    margin: 0 10px 0 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; }
+
+  header .logo .button-toggle .bi-chevron-right {
+    transition: .5s ease-in-out;
+    font-size: 1.5rem; }
+
+  header .logo .button-toggle .bi-chevron-right.rotate {
+    transform: rotate(180deg);
+    transition: .5s ease-in-out; }
+
+  main .content-left {
+    transform: translateX(-500px);
+    position: absolute;
+    z-index: 99; }
+
+  main .content-right {
+    padding: 8rem 0 0 0rem; }
+
+  main .content-right .card {
+    background: #ffffff;
+    margin-bottom: 2rem;
+    border: none; }
+
+  main .open {
+    transform: translateX(0px);
+    position: absolute;
+    z-index: 99; } }
+
+/*# sourceMappingURL=responsive.css.map */
