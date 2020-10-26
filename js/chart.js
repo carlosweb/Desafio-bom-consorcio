@@ -31,5 +31,7 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+        responsive: true
+    }
 });
