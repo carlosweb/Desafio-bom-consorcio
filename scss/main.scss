@@ -126,8 +126,11 @@ header {
 .menu{
     display: flex;
     justify-content: space-between;
+
     background-color: #8452d1;
     width: 100%;
+
+    position: relative;
 
     .navbar {
         .navbar-toggler{
@@ -154,6 +157,12 @@ header {
                 }
             } 
         }
+    }
+
+    .theme-color{
+        top: 35px;
+        position: absolute;
+        right: 225px;
     }
   }
 

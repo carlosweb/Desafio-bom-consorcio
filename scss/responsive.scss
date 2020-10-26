@@ -5,11 +5,11 @@
 // @media (min-width: 1200px) { ... }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
+// @media (min-width: 992px) { 
 
- }
+//  }
 
-@media (max-width: 768px) { 
+@media (max-width: 992px) { 
 
     header .logo .logo-site {
         display: none;
@@ -27,6 +27,12 @@
         border-radius: 5px;
         cursor: pointer;
         display: block;
+    }
+
+    header .menu .theme-color {
+        top: 35px;
+        position: absolute;
+        right: 35px;
     }
 
     header .logo .button-toggle .bi-chevron-right {
