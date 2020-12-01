@@ -32,6 +32,6 @@ $ https://github.com/carlosweb/Desafio-bom-consorcio.git
 - HTML
 - SCSS
 - JAVASCRIPT
-- BOOSTRAP
+- BOOTSTRAP
 
 
